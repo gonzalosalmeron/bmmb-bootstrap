@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="javascripts/javascript.js"></script>
+    <script src="javascripts/javascript4.js"></script>
+    <title>BMMB</title>
+</head>
+
+<body>
+    <!--------------------- NAVBAR SECTION -------------------->
+    <!-- este es el logo principal-->
+    <section id="primary-logo">
+        <div class="container">
+            <img src="imagenes/bmmb-logo3.jpg" width="140px" style="margin-top: 10px;" alt="">
+        </div>
+    </section>
+    <!--aquí empieza la barra de navegación-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar navbar-light bg-light">
+        <div class="container">
+            <a id="navbar-logo" class="navbar-brand" href="#"><img src="imagenes/bmmb-logo2.png" width="90px" alt=""></a>
+            <button id="tb1" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="toggleButton" class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ver más...</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a id="myBtn" class="nav-link" href="#">Contacto</a>
+                        <div id="myModal" class="modal">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div>
+                    </li>
+                    <!-- The Modal -->
+
+                </ul>
+                <!-- la barra de búsqueda-->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button id="navbar-button" class="btn btn-outline-warning my-2 my-sm-0" onclick="" type="submit">Buscar</button>
+                </form>
+            </div>
+    </nav>
+    <!-------------------- HERO SECTION --------------------->
+    <section id="hero">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div id="hero-text" class="carousel-caption d-none d-block">
+                    <p>PÁGINA OFICIAL DE LA BANDA DE MÚSICA DE BERJA, 28 AÑOS DE HERMANDAD MUSICAL</p>
+                    <!-- imagenes del carousel-->
+                </div>
+                <div class="carousel-item active">
+                    <img src="imagenes/hero_1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/hero_2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/hero_3.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/hero_4.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="imagenes/hero_5.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <!-- controles del carousel -->
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </section>
+    <!-------------------- PHRASE SECTION --------------------->
+    <section id="frase-bmmb">
+        <div class="container">
+            <h1>Lorem ipsum dolor sit amet</h1>
+            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus hic impedit illum! Explicabo eaque, tempora ipsum veritatis optio consectetur non, illum sequi nulla id et neque minus? Dolores, repudiandae ducimus! Distinctio laborum, obcaecati
+                reiciendis similique sunt fuga et earum, eius perspiciatis aliquam sed labore? Amet ipsum praesentium tenetur quisquam distinctio a ut quaerat mollitia officia excepturi. Veritatis eius sint at.</p><br>
+            <hr>
+        </div>
+    </section>
+    <!-------------------- CARD DECK SECTION --------------------->
+    <section id="card-deck">
+        <div class="container">
+            <h1>Lorem ipsum dolor sit amet consectetur</h1>
+            <div class="card-deck">
+                <div class="card">
+                    <img class="card-img-top" src="imagenes/conciertos/main.jpg" alt="Card image cap">
+                    <div class="middle">
+                        <div class="text">Conciertos</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="imagenes/repertorio/main.jpg" alt="Card image cap">
+                    <div class="middle">
+                        <div class="text">Repertorio</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="imagenes/integrantes/main.jpg" alt="Card image cap">
+                    <div class="middle">
+                        <div class="text">Integrantes</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="imagenes/salidas/main.jpg" alt="Card image cap">
+                    <div class="middle">
+                        <div class="text">Salidas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------- VIDEO SECTION --------------------->
+    <section id="video-inicio">
+        <div class="container">
+            <div class="grid2col">
+                <div class="col2">
+                    <h3><b>Concierto Feria 2019</b><br>de la<br><b>BMMB</b></h3>
+                </div>
+                <div class="col2">
+                    <iframe width="100%" height="370px" src="https://www.youtube-nocookie.com/embed/XZSVop5sBHs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------- TEEEEESTT SECTION --------------------->
+    <section id="volteado">
+        Make
+        <div id=flip>
+            <div>
+                <div>wOrK</div>
+            </div>
+            <div>
+                <div>lifeStyle</div>
+            </div>
+            <div>
+                <div>Everything</div>
+            </div>
+        </div>
+        AweSoMe!
+    </section>
+</body>
+
+</html>
