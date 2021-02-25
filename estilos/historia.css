@@ -1,10 +1,27 @@
+/********************************* BASIC STYLE **********************************/
+
 body {
     width: 100%;
 }
 
+
+/********************************* PARALLAX STYLE **********************************/
+
 .parallax {
     /* The image used */
     background-image: url("../imagenes/historia/primeros-integrantes.png");
+    /* Set a specific height */
+    height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-2 {
+    /* The image used */
+    background-image: url("../imagenes/historia/Imagen4.jpg");
     /* Set a specific height */
     height: 500px;
     /* Create the parallax scrolling effect */
@@ -29,6 +46,18 @@ body {
     font-size: 25px;
     letter-spacing: 10px;
 }
+
+.historia-texto {
+    text-align: justify;
+}
+
+.carousel-inner img {
+    height: 40em;
+    object-fit: cover;
+}
+
+
+/********************************* MEDIA QUERY STYLE **********************************/
 
 @media only screen and (max-width: 991px) {
     .caption {
