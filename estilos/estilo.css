@@ -93,7 +93,13 @@ nav {
 /********************************* HERO STYLE **********************************/
 
 #hero-text {
-    color: rgba(255, 255, 255, 0.712);
+    color: rgb(255, 255, 255);
+    text-shadow: 0.3em 0.2em 0.2em black;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    height: 90vh;
 }
 
 
@@ -311,7 +317,7 @@ footer {
         width: 0%;
     }
     #primary-logo {
-        margin-top: -15px;
+        margin-top: -25px;
     }
     .col2 h3 {
         margin-top: 0;
