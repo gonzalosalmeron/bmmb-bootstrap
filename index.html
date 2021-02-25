@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="imagenes/bmmb-logo2.png">
+    <!-- hojas de estilos -->
     <link rel="stylesheet" href="estilos/estilo.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="javascripts/javascript.js"></script>
     <script src="javascripts/javascript4.js"></script>
@@ -35,8 +39,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
                     </li>
+                    <!-- modal de contacto y ubicación -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a id="modal-navbar" type="button" class="btn btn-primary nav-link" data-toggle="modal" data-target="#contacto">
+                            Contacto
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ver más...</a>
@@ -47,19 +54,12 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
+                    <!-- modal de contacto y ubicación -->
                     <li class="nav-item">
-                        <a id="myBtn" class="nav-link" href="#">Contacto</a>
-                        <div id="myModal" class="modal">
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
-                            </div>
-
-                        </div>
+                        <a id="modal-navbar" type="button" class="btn btn-primary nav-link" data-toggle="modal" data-target="#ubicacion">
+                            Ubicación
+                        </a>
                     </li>
-                    <!-- The Modal -->
-
                 </ul>
                 <!-- la barra de búsqueda-->
                 <form class="form-inline my-2 my-lg-0">
@@ -68,6 +68,75 @@
                 </form>
             </div>
     </nav>
+    <!-- MODAL GOOGLE MAPS-->
+    <div class="modal fade" id="ubicacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-xl modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="width: 100%">
+                        <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=Callej%C3%B3n%20Pardo,%205,%2004760%20Berja,%20Almer%C3%ADa+(Banda%20Municipal%20M%C3%BAsica%20Berja)&amp;t=&amp;z=17&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL FORM-->
+    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+            <div id="contacto-form" class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div style="width: 100%">
+                        <form>
+                            <div class="form-group row">
+                                <label for="inlineFormInputName2" class="col-sm-2 col-form-label">Nombre</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inlineFormInputName2" placeholder="Nombre" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="exampleFormControlTextarea1" class="col-sm-2 col-form-label">Asunto</label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribir aqui..." required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                                        <label class="form-check-label" for="gridCheck1">
+                                            Marque la casilla si desea recibir noticias
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-2">
+                                    <button type="submit" class="btn btn-warning">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-------------------- HERO SECTION --------------------->
     <section id="hero">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -155,9 +224,40 @@
                     <iframe width="100%" height="370px" src="https://www.youtube-nocookie.com/embed/XZSVop5sBHs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
+            <hr class="solid">
         </div>
     </section>
-    <!-------------------- TEEEEESTT SECTION --------------------->
+    <!-------------------- RESUMEN CONTACTO SECTION ---------------->
+    <section id="resumen-contacto">
+        <div class="container">
+            <img src="imagenes/BMBerja.png" width="200px" alt="">
+            <div class="grid3col">
+                <div class="col3">
+                    <p><img width="30px" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEzLjY0IDUxMy42NCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEzLjY0IDUxMy42NDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxwYXRoIGQ9Ik00OTkuNjYsMzc2Ljk2bC03MS42OC03MS42OGMtMjUuNi0yNS42LTY5LjEyLTE1LjM1OS03OS4zNiwxNy45MmMtNy42OCwyMy4wNDEtMzMuMjgsMzUuODQxLTU2LjMyLDMwLjcyDQoJCQljLTUxLjItMTIuOC0xMjAuMzItNzkuMzYtMTMzLjEyLTEzMy4xMmMtNy42OC0yMy4wNDEsNy42OC00OC42NDEsMzAuNzItNTYuMzJjMzMuMjgtMTAuMjQsNDMuNTItNTMuNzYsMTcuOTItNzkuMzZsLTcxLjY4LTcxLjY4DQoJCQljLTIwLjQ4LTE3LjkyLTUxLjItMTcuOTItNjkuMTIsMGwtNDguNjQsNDguNjRjLTQ4LjY0LDUxLjIsNS4xMiwxODYuODgsMTI1LjQ0LDMwNy4yYzEyMC4zMiwxMjAuMzIsMjU2LDE3Ni42NDEsMzA3LjIsMTI1LjQ0DQoJCQlsNDguNjQtNDguNjRDNTE3LjU4MSw0MjUuNiw1MTcuNTgxLDM5NC44OCw0OTkuNjYsMzc2Ljk2eiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K"
+                        />&nbsp&nbsp +34 950 94 39 39</p>
+                </div>
+                <div class="col3">
+                    <p><img width="35px" src="data:image/svg+xml;base64,PHN2ZyBpZD0iQ2FwYV8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2MDUuODEyIDYwNS44MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNjA1LjgxMiA2MDUuODEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnPjxnIGlkPSJQYWdlLTFfNl8iPjxnIGlkPSJfeDMwXzA3LS0tTWFpbCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEgLTEpIj48cGF0aCBpZD0iU2hhcGVfMzlfIiBkPSJtNTQ3LjYyNiA1MTguMDc5LTE1LjM2NC0xNS4zNjRjOTkuNC0xMTMuOTAyIDk5LjQtMjgzLjcxNSAwLTM5Ny42MThsMTUuMzY0LTE1LjM2NGM4LjExNi04LjE3NyA4LjExNi0yMS4zNyAwLTI5LjU0Ny04LjE3Ny04LjExNi0yMS4zNy04LjExNi0yOS41NDcgMGwtMTUuMzY0IDE1LjM2NGMtMTEzLjkwMi05OS40LTI4My43MTUtOTkuNC0zOTcuNjE4IDBsLTE1LjM2My0xNS4zNjRjLTguMTc3LTguMTE2LTIxLjM3LTguMTE2LTI5LjU0NyAwLTguMTE2IDguMTc3LTguMTE2IDIxLjM3IDAgMjkuNTQ3bDE1LjM2NCAxNS4zNjRjLTk5LjQgMTEzLjkwMy05OS40IDI4My43MTUgMCAzOTcuNjE4bC0xNS4zNjQgMTUuMzY0Yy04LjExNiA4LjE3Ny04LjExNiAyMS4zNyAwIDI5LjU0NyA4LjE3NyA4LjExNiAyMS4zNyA4LjExNiAyOS41NDcgMGwxNS4zNjQtMTUuMzY0YzExMy45MDMgOTkuNCAyODMuNzE1IDk5LjQgMzk3LjYxOCAwbDE1LjM2NCAxNS4zNjRjOC4xNzcgOC4xMTYgMjEuMzcgOC4xMTYgMjkuNTQ3IDAgOC4xMTUtOC4xNzcgOC4xMTUtMjEuMzctLjAwMS0yOS41NDd6bS04OC42MzEtMjkuNTM3IDE0LjExIDE0LjFjLTk3LjQ3MyA4My4xNTktMjQwLjkyNSA4My4xNTktMzM4LjM5OCAwbDE0LjExLTE0LjFjOC4xMjctOC4xNzMgOC4xMjctMjEuMzc1IDAtMjkuNTQ3LTguMTczLTguMTI3LTIxLjM3NS04LjEyNy0yOS41NDcgMGwtMTQuMSAxNC4xMWMtODMuMTU5LTk3LjQ3My04My4xNTktMjQwLjkyNSAwLTMzOC4zOThsMTQuMSAxNC4xMWM4LjE3MyA4LjEyNyAyMS4zNzUgOC4xMjcgMjkuNTQ3IDAgOC4xMjctOC4xNzMgOC4xMjctMjEuMzc1IDAtMjkuNTQ3bC0xNC4xMS0xNC4xYzk3LjQ3My04My4xNTkgMjQwLjkyNS04My4xNTkgMzM4LjM5OCAwbC0xNC4xMSAxNC4xYy04LjEyNyA4LjE3My04LjEyNyAyMS4zNzUgMCAyOS41NDcgOC4xNzMgOC4xMjcgMjEuMzc1IDguMTI3IDI5LjU0NyAwbDE0LjEtMTQuMTFjODMuMTU5IDk3LjQ3MyA4My4xNTkgMjQwLjkyNSAwIDMzOC4zOThsLTE0LjEtMTQuMTFjLTguMTczLTguMTI3LTIxLjM3NS04LjEyNy0yOS41NDcgMC04LjEyNyA4LjE3Mi04LjEyNyAyMS4zNzUgMCAyOS41NDd6Ii8+PHBhdGggaWQ9IlNoYXBlXzM4XyIgZD0ibTE1Ny42ODUgMjEyLjY1NCA5OS43NDQgOTEuMjQyLTk5Ljc0NCA5MS4yNjN6Ii8+PHBhdGggaWQ9IlNoYXBlXzM3XyIgZD0ibTMxMC45ODcgMzExLjYyNWMtNC4wNTQgMy42Ni0xMC4yMyAzLjYyOS0xNC4yNDYtLjA3M2wtMTIyLjUzMy0xMTIuMDloMjU5LjM5N3oiLz48cGF0aCBpZD0iU2hhcGVfMzZfIiBkPSJtMjcyLjg5NyAzMTguMDQ4IDkuNjcyIDguODQ2YzExLjk5NiAxMS4xNTQgMzAuNTU4IDExLjE4NSA0Mi41OTIuMDczbDkuNzU1LTguOTIgOTguNjg5IDkwLjMwMmgtMjU5LjM5N3oiLz48cGF0aCBpZD0iU2hhcGVfMzVfIiBkPSJtMzUwLjM4NCAzMDMuODk2IDk5Ljc0NC05MS4yNDJ2MTgyLjUwNXoiLz48L2c+PC9nPjwvZz48L3N2Zz4="
+                        />&nbsp&nbsp contacto@bmmberja.com</p>
+                </div>
+                <div class="col3">
+                    <p><img width="35px" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSAxKSI+DQoJPGc+DQoJCTxnPg0KCQkJPHBhdGggZD0iTTI1NC45OTEsMjEyLjMzOWMzNS4zNTUsMCw2NC0yOC42NDUsNjQtNjRzLTI4LjY0NS02NC02NC02NHMtNjQsMjguNjQ1LTY0LDY0UzIxOS42MzYsMjEyLjMzOSwyNTQuOTkxLDIxMi4zMzl6DQoJCQkJIE0yNTQuOTkxLDEyNy4wMDZjMTEuNzkxLDAsMjEuMzMzLDkuNTQyLDIxLjMzMywyMS4zMzNzLTkuNTQyLDIxLjMzMy0yMS4zMzMsMjEuMzMzYy0xMS43OTEsMC0yMS4zMzMtOS41NDItMjEuMzMzLTIxLjMzMw0KCQkJCVMyNDMuMiwxMjcuMDA2LDI1NC45OTEsMTI3LjAwNnoiLz4NCgkJCTxwYXRoIGQ9Ik0yMjcuMjI5LDM5Ni41MThsOC42ODEsMTcuMzYyYzcuODYzLDE1LjcyNiwzMC4zMDUsMTUuNzIzLDM4LjE2NC0wLjAwNGwxOC4zODktMzYuOA0KCQkJCWMxOC40NjYtMzYuOTAyLDM1LjkzOS02Ni4wMjEsNzUuNzYzLTEyOC42MTlsMS4wMzYtMS42MjljNS44NTItOS4xOTksOC42ODEtMTMuNjUxLDEyLjA0Mi0xOC45NjENCgkJCQljMTQuOTU2LTIzLjYyMywyMy4wMi01MC45OTIsMjMuMDItNzkuNTI3YzAtODkuMDMyLTc3LjM1LTE1OC41MjEtMTY2Ljc4Ni0xNDguMzQzYy02Ni41NDgsNy41OTEtMTIxLjE4OCw2MC44MzUtMTMwLjM5OCwxMjcuMTI1DQoJCQkJYy01LjUxMSwzOS42ODMsNC42MDQsNzguMzk0LDI3LjUyNiwxMDkuNTE3QzE2NS41LDI3OC40MzUsMTg5LjI0MywzMjAuNTc0LDIyNy4yMjksMzk2LjUxOHogTTE0OS40MDIsMTMyLjk5Mg0KCQkJCWM2LjUyOC00Ni45ODksNDUuNzYtODUuMjE4LDkyLjk2Ny05MC42MDNjNjQuMDU1LTcuMjksMTE5LjI4OSw0Mi4zMywxMTkuMjg5LDEwNS45NTFjMCwyMC4zOS01LjczNSwzOS44NTUtMTYuNDAzLDU2LjcwNg0KCQkJCWMtMy4zNCw1LjI3Ni02LjE1NSw5LjcwOC0xMS45OTEsMTguODhsLTEuMDM2LDEuNjI5Yy00MC4xNDgsNjMuMTA5LTU4LjE4NCw5My4xMjItNzcuMjgsMTMxLjE1Mg0KCQkJCWMtMzMuMTk2LTY1LjM2My01Ni4yNzEtMTA1LjE2OS04NS45MzUtMTQ1LjM4M0MxNTIuNjM2LDE4OS4wODcsMTQ1LjQzNywxNjEuNTM4LDE0OS40MDIsMTMyLjk5MnoiLz4NCgkJCTxwYXRoIGQ9Ik0zODcuODgsMzEyLjA0Yy0xMS40NjQtMi43MTktMjIuOTYxLDQuMzcxLTI1LjY4LDE1LjgzNWMtMi43MTksMTEuNDY0LDQuMzcxLDIyLjk2MiwxNS44MzUsMjUuNjgNCgkJCQljNTcuMjEyLDEzLjU2Nyw5MC4yOTgsMzUuMjc0LDkwLjI5OCw1MC43NzNjMCwyOS40NzgtOTQuOTQ5LDY0LTIxMy4zMzMsNjRjLTExOC4zOTgsMC0yMTMuMzMzLTM0LjUxOC0yMTMuMzMzLTY0DQoJCQkJYzAtMTUuNTA4LDMzLjA1My0zNy4yMDksOTAuMjM2LTUwLjc3M2MxMS40NjQtMi43MTksMTguNTUzLTE0LjIxNywxNS44MzQtMjUuNjgxYy0yLjcxOS0xMS40NjQtMTQuMjE3LTE4LjU1My0yNS42ODEtMTUuODMzDQoJCQkJQzQ3LjIwNSwzMjkuNzk2LTEsMzYxLjQ0NS0xLDQwNC4zMjljMCw2NC44MDQsMTE1LjEzNCwxMDYuNjY3LDI1NiwxMDYuNjY3YzE0MC44NTMsMCwyNTYtNDEuODY1LDI1Ni0xMDYuNjY3DQoJCQkJQzUxMSwzNjEuNDQ0LDQ2Mi43NjUsMzI5Ljc5OCwzODcuODgsMzEyLjA0eiIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo="
+                        />&nbsp&nbsp Callejón Pardo, 5, Berja, Almería</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-------------------- FOOTER SECTION --------------------->
+    <footer>
+        <div class="container">
+            <div class="grid-footer">
+                <div class="col-footer">
+                    <p>Aviso legal | Política de cookies | Política de privacidad</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <section id="volteado">
         Make
         <div id=flip>
