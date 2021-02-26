@@ -3,3 +3,12 @@
 #enviadoCorrectamente {
     text-align: center;
 }
+
+
+/********************************* MEDIA QUERY **********************************/
+
+@media only screen and (max-width: 991px) {
+    #enviadoCorrectamente img {
+        width: 90%;
+    }
+}
